@@ -1,0 +1,37 @@
+{
+  "name": "truenas",
+  "version": "1.0.0",
+  "description": "Github action to interact with truenas through its JSON-RPC 2.0 websocket api",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "npx local-action ./ src/main.ts .env.test",
+    "build": "rollup -c",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "gh",
+    "github",
+    "github-action",
+    "truenas"
+  ],
+  "author": "Daury Guzman",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^3.0.0",
+    "node-fetch": "^3.3.2",
+    "truenas-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@github/local-action": "^7.0.1",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/node": "^25.3.0",
+    "rollup": "^4.59.0",
+    "typescript": "^5.9.3"
+  }
+}
